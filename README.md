@@ -2,10 +2,6 @@
 
 Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **compressão gzip por chunk apenas quando vale a pena** (caso contrário salva o chunk **raw**), gera um `manifest.json` com hashes e metadados, e permite **reconstrução** e **verificação de integridade**.
 
-## Por que compressão condicional?
-Dados de alta entropia (ex.: `os.urandom`, muitos formatos já comprimidos) não comprimem bem. Nesses casos, comprimir gasta CPU e não reduz tamanho.  
-Aqui, o chunk só é armazenado como gzip se for pelo menos **X% menor** (`--min-gain`, default 2%).
-
 ## Arquivos
 - `chunker.py` — CLI (`chunk`, `rebuild`, `verify`, `stats`)
 - `compression.py` — compressão/ descompressão
