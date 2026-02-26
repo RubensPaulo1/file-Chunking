@@ -10,24 +10,24 @@ Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **c
 - `hashing.py` — SHA-256
 - `manifest.py` — leitura/escrita do `manifest.json`
 
-## Uso
+## Comandos
 
 ### 1) Chunk + armazenar
 ```bash
-python chunker.py chunk arquivo_grande.bin --chunk 1048576 --level 6 --min-gain 0.02
+python chunker.py chunk arquivo.bin --level (1 ao 9)
 ```
 Isso cria uma pasta `chunks_<stem>/` com:
-- arquivos `*.partXXXXXX.gz` (comprimidos) e/ou `*.partXXXXXX.raw` (não comprimidos)
+- arquivos `*.partXXXXXX.gz` (comprimidos) ou `*.partXXXXXX.raw` (não comprimidos)
 - `manifest.json`
 
 ### 2) Verificar integridade
 ```bash
-python chunker.py verify chunks_arquivo_grande
+python chunker.py verify chunks_arquivo
 ```
 
 ### 3) Reconstruir
 ```bash
-python chunker.py rebuild chunks_arquivo_grande --out reconstruido.bin
+python chunker.py rebuild chunks_arquivo_grande --out nomeNovo
 ```
 
 ### 4) Estatísticas
