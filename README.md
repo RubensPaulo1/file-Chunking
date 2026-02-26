@@ -1,4 +1,4 @@
-# Chunker MVP — Chunking fixo + Compressão condicional + Manifest + Verify
+# Chunker + Compressão condicional + Manifest + Verify
 
 Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **compressão gzip por chunk apenas quando vale a pena** (caso contrário salva o chunk **raw**), gera um `manifest.json` com hashes e metadados, e permite **reconstrução** e **verificação de integridade**.
 
@@ -36,7 +36,3 @@ python chunker.py rebuild chunks_arquivo_grande --out reconstruido.bin
 ```bash
 python chunker.py stats chunks_arquivo_grande
 ```
-
-## Dicas
-- Para reduzir o número de arquivos, aumente o chunk size (ex.: 8 MiB = `--chunk 8388608`).
-- Arquivos já comprimidos (mp4/mkv/jpg/zip/7z) tendem a virar muitos chunks `raw` — isso é esperado.
