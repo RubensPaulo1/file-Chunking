@@ -1,4 +1,4 @@
-# Chunker + Compressão condicional + Manifest + Verify
+# Chunker(Compressão condicional + Manifesto + Integridade)
 
 Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **compressão gzip por chunk apenas quando vale a pena** (caso contrário salva o chunk **raw**), gera um `manifest.json` com hashes e metadados, e permite **reconstrução** e **verificação de integridade**.
 
