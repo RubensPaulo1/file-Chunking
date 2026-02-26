@@ -2,6 +2,8 @@
 
 Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **compressão gzip por chunk apenas quando vale a pena** (caso contrário salva o chunk **raw**), gera um `manifest.json` com hashes e metadados, e permite **reconstrução** e **verificação de integridade**.
 
+<img width="1536" height="1024" alt="diagrama" src="https://github.com/user-attachments/assets/8263ced8-bf8b-4d6f-8d06-d6d21d2c9eff" />
+
 ## Arquivos
 - `chunker.py` — CLI (`chunk`, `rebuild`, `verify`, `stats`)
 - `compression.py` — compressão/ descompressão
