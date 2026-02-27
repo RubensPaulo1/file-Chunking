@@ -8,7 +8,7 @@ from compression import compress_conditional, decompress
 from hashing import sha256_hex
 from manifest import Manifest, ChunkEntry, write_manifest, read_manifest
 
-DEFAULT_CHUNK_SIZE = 1024 * 1024  # 1 MiB
+DEFAULT_CHUNK_SIZE = 1024 * 1024  
 
 
 def chunk_file(
@@ -19,7 +19,7 @@ def chunk_file(
     compression_level: int = 6,
     min_gain_ratio: float = 0.02,
 ) -> Path:
-    """Split file into fixed-size chunks, store each chunk conditionally compressed, and write manifest.json."""
+
     src = Path(file_path)
     if not src.exists() or not src.is_file():
         raise FileNotFoundError(f"Arquivo não encontrado: {src}")
