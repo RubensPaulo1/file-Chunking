@@ -10,7 +10,7 @@ StoredAs = Literal["raw", "gzip"]
 @dataclass
 class ChunkEntry:
     index: int
-    filename: str            # stored chunk filename
+    filename: str          
     stored_as: StoredAs      # raw|gzip
     size_raw: int
     size_stored: int
