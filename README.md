@@ -1,4 +1,10 @@
 # Chunker(Compressão condicional + Manifesto + Integridade)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Ativo-brightgreen)
+![Last Commit](https://img.shields.io/github/last-commit/RubensPaulo1/file-Chunking)
+![Repo Size](https://img.shields.io/github/repo-size/RubensPaulo1/file-Chunking)
+![Issues](https://img.shields.io/github/issues/RubensPaulo1/file-Chunking)
+![Project Type](https://img.shields.io/badge/Project-File%20Processing-orange)
 
 Este mini-projeto quebra um arquivo grande em chunks de tamanho fixo, aplica **compressão gzip por chunk apenas quando vale a pena** (caso contrário salva o chunk **raw**), gera um `manifest.json` com hashes e metadados, e permite **reconstrução** e **verificação de integridade**.
 
